@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinIOS", "XamarinIOS\XamarinIOS.csproj", "{6EBE906B-961C-4361-837E-B30925DCCCE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinAndroid", "XamarinAndroid\XamarinAndroid.csproj", "{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -19,5 +21,13 @@ Global
 		{6EBE906B-961C-4361-837E-B30925DCCCE2}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6EBE906B-961C-4361-837E-B30925DCCCE2}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6EBE906B-961C-4361-837E-B30925DCCCE2}.Debug|iPhone.Build.0 = Debug|iPhone
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Release|iPhone.Build.0 = Release|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9BC4C0ED-C767-4C4E-AA8E-6543B6BE3E9B}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
