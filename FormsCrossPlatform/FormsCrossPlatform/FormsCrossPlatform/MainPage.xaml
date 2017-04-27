@@ -8,6 +8,10 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
     </ContentPage.Padding>
 
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -21,23 +25,23 @@
             </Grid.ColumnDefinitions>
 
             <Label Text="Name: " />
-            <Entry x:Name="_name" Grid.Column="1">
+            <Entry Text="{Binding NameField}" Grid.Column="1">
                 <Entry.Effects>
                     <local:FocusEffect />
                 </Entry.Effects>
             </Entry>
 
             <Label Text="Email: " Grid.Row="1" />
-            <Entry x:Name="_email" Grid.Column="1" Grid.Row="1">
+            <Entry Text="{Binding EmailField}" Grid.Column="1" Grid.Row="1">
                 <Entry.Effects>
                     <local:FocusEffect />
                 </Entry.Effects>
             </Entry>
 
-            <Button x:Name="_add" Grid.ColumnSpan="2" Grid.Row="2" Text="Add" />
+            <Button Grid.ColumnSpan="2" Grid.Row="2" Text="Add" Command="{Binding AddCommand}" />
         </Grid>
 
-        <ListView x:Name="_contactList" Grid.Row="1">
+        <ListView Grid.Row="1" ItemsSource="{Binding Contacts}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
