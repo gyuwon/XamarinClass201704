@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:FormsCrossPlatform"
              x:Class="FormsCrossPlatform.MainPage">
 
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,20,0,0" />
+    </ContentPage.Padding>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
