@@ -50,19 +50,32 @@ namespace FormsCrossPlatform
             public AddContactCommand(MainViewModel viewModel)
             {
                 _viewModel = viewModel;
+                _viewModel.PropertyChanged += (s, e) =>
+                {
+                    if (e.PropertyName == nameof(NameField) ||
+                        e.PropertyName == nameof(EmailField))
+                    {
+                        CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+                    }
+                };
             }
 
             public event EventHandler CanExecuteChanged;
 
-            public bool CanExecute(object parameter) => true;
+            public bool CanExecute(object parameter)
+                => !string.IsNullOrWhiteSpace(_viewModel.NameField)
+                && !string.IsNullOrWhiteSpace(_viewModel.EmailField);
 
             public void Execute(object parameter)
             {
                 _viewModel._contacts.Add(new Contact
                 {
-                    Name = _viewModel._nameField,
-                    Email = _viewModel._emailField
+                    Name = _viewModel.NameField,
+                    Email = _viewModel.EmailField
                 });
+
+                _viewModel.NameField = string.Empty;
+                _viewModel.EmailField = string.Empty;
             }
         }
     }
